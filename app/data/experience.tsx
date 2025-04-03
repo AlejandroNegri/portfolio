@@ -2,7 +2,7 @@ export const experience = [
     {
         title: "Frontend Developer",
         company: "Unicity",
-        period: "Jun 2024 - Present",
+        period: "Mar 2024 - Present",
         description: "Frontend development for Unicity International's global e-commerce platform. Built responsive interfaces using Next.js, React, AngularJS, and Tailwind for a product catalog distributed through a multi-level marketing network.",
     },
     {
