@@ -15,7 +15,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4 flex h-14 items-center justify-between">
           <div className="font-bold text-xl">AN</div>
           <nav className="hidden md:flex gap-6">
-            {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
+            {["About", "Skills", "Experience", "Contact"].map((item) => (
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -57,11 +57,8 @@ export default function Portfolio() {
             </div>
             <div className="space-y-4 md:max-w-[60%]">
               <h1 className="text-3xl font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Alejandro Negri</h1>
-              <h2 className="text-xl font-medium text-primary">Senior Full Stack Developer</h2>
-              <p className="text-muted-foreground">Building robust and scalable web applications with modern technologies.</p>
-              <Button asChild className="bg-primary hover:bg-primary/90">
-                <Link href="#projects">View Projects</Link>
-              </Button>
+              <h2 className="text-xl font-medium text-primary">Senior Frontend Developer</h2>
+              <p className="text-muted-foreground">Product-oriented Frontend Developer | 10+yrs experience | React & Next.js | Building human-centered interfaces with AI</p>
             </div>
           </div>
         </section>
@@ -70,7 +67,7 @@ export default function Portfolio() {
         <section id="about" className="pt-20">
           <h2 className="text-2xl font-bold tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">About Me</h2>
           <div className="bg-muted/30 rounded-lg p-6">
-            <p className="text-muted-foreground max-w-3xl">
+            <p className="text-muted-foreground">
               I&apos;m a product-oriented Frontend Developer with over 10 years of experience crafting user-centric, performant web applications. My background includes working across industries, leading teams, and collaborating closely with design and product to deliver meaningful user experiences.
 
               I specialize in building interfaces with React and Next.js, and I&apos;m always focused on shipping products that not only work — but feel great to use.
@@ -78,10 +75,10 @@ export default function Portfolio() {
               As the tech landscape shifts, I&apos;m embracing tools like generative AI to enhance my workflow, speed up prototyping, and explore new ways to build smarter, more adaptive frontends.
             </p>
             <br />
-            <p className="text-muted-foreground max-w-3xl font-medium">
+            <p className="text-muted-foreground font-medium">
               What I bring to the table:
             </p>
-            <ul className="list-none pl-6 space-y-2 mt-4 text-muted-foreground max-w-3xl">
+            <ul className="list-none pl-6 space-y-2 mt-4 text-muted-foreground">
               {[
                 "Strong UX instincts and product thinking",
                 "Clean, maintainable code with performance in mind",
