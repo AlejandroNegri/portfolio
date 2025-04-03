@@ -8,7 +8,6 @@ import { experience } from "./data/experience"
 import { socialLinks } from "./data/social"
 
 export default function Portfolio() {
-
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -46,7 +45,7 @@ export default function Portfolio() {
         <section className="pt-10">
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center">
             <div className="md:mr-8 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/5 rounded-full blur-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/5 rounded-full blur-xl" />
               <Image
                 src="/image.jpeg"
                 alt="Alejandro Negri"
@@ -211,7 +210,7 @@ export default function Portfolio() {
           <h2 className="text-2xl font-bold tracking-tight mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Get In Touch</h2>
           <div className="bg-muted/30 rounded-lg p-6">
             <p className="text-muted-foreground mb-6">
-              Have a project in mind? I'm always open to new ideas and collaborations.
+              Have a project in mind? I&apos;m always open to new ideas and collaborations.
             </p>
             <div className="space-y-2">
               {socialLinks.map((social, i) => (
