@@ -1,54 +1,13 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Code, ExternalLink, Github, Linkedin, Mail } from "lucide-react"
+import { Code, ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { experience } from "./data/experience"
 import { socialLinks } from "./data/social"
-import { useState } from "react"
-import { contactFormSchema } from './lib/validations'
 
 export default function Portfolio() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
-  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-  const [errors, setErrors] = useState<Record<string, string>>({})
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setFormStatus('loading')
-    setErrors({})
-
-    try {
-      // Validate form data
-      contactFormSchema.parse(formData)
-
-      // Create mailto URL with pre-filled data
-      const mailtoUrl = `mailto:alejandro.negri@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      )}`
-
-      // Open in a new window/tab
-      window.open(mailtoUrl, '_blank')
-
-      setFormStatus('success')
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    } catch (error) {
-      setFormStatus('error')
-    }
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -113,11 +72,11 @@ export default function Portfolio() {
           <h2 className="text-2xl font-bold tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">About Me</h2>
           <div className="bg-muted/30 rounded-lg p-6">
             <p className="text-muted-foreground max-w-3xl">
-              I'm a product-oriented Frontend Developer with over 10 years of experience crafting user-centric, performant web applications. My background includes working across industries, leading teams, and collaborating closely with design and product to deliver meaningful user experiences.
+              I&apos;m a product-oriented Frontend Developer with over 10 years of experience crafting user-centric, performant web applications. My background includes working across industries, leading teams, and collaborating closely with design and product to deliver meaningful user experiences.
 
-              I specialize in building interfaces with React and Next.js, and I'm always focused on shipping products that not only work — but feel great to use.
+              I specialize in building interfaces with React and Next.js, and I&apos;m always focused on shipping products that not only work — but feel great to use.
 
-              As the tech landscape shifts, I'm embracing tools like generative AI to enhance my workflow, speed up prototyping, and explore new ways to build smarter, more adaptive frontends.
+              As the tech landscape shifts, I&apos;m embracing tools like generative AI to enhance my workflow, speed up prototyping, and explore new ways to build smarter, more adaptive frontends.
             </p>
             <br />
             <p className="text-muted-foreground max-w-3xl font-medium">
